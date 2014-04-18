@@ -6,3 +6,6 @@ comments: true
 sharing: true
 footer: true
 ---
+
+一枚IOS开发程序员、就职于云娃科技、专注于互联网领域。
+ 
