@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Life | Mr.Curiosity's LongLife]]></title>
-  <link href="http://GHWind.github.io/blog/categories/life/atom.xml" rel="self"/>
-  <link href="http://GHWind.github.io/"/>
-  <updated>2014-06-23T12:07:55+08:00</updated>
-  <id>http://GHWind.github.io/</id>
+  <link href="http://ghwind.github.io/blog/categories/life/atom.xml" rel="self"/>
+  <link href="http://ghwind.github.io/"/>
+  <updated>2014-06-23T12:11:23+08:00</updated>
+  <id>http://ghwind.github.io/</id>
   <author>
     <name><![CDATA[Mr.Curiosity]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[茶道]]></title>
-    <link href="http://GHWind.github.io/blog/2014/04/17/cha-dao/"/>
+    <link href="http://ghwind.github.io/blog/2014/04/17/cha-dao/"/>
     <updated>2014-04-17T13:23:45+08:00</updated>
-    <id>http://GHWind.github.io/blog/2014/04/17/cha-dao</id>
+    <id>http://ghwind.github.io/blog/2014/04/17/cha-dao</id>
     <content type="html"><![CDATA[<p>喝茶十二忌:                                                                   <br/>
 忌空腹喝茶,茶入肺腑会冷脾胃;                                                    <br/>
 忌饮烫茶,最好56摄氏度以下;                                                                                                                                    <br/>

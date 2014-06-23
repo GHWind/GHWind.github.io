@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://GHWind.github.io/sitemap.xml 
+Sitemap: http://ghwind.github.io/sitemap.xml 

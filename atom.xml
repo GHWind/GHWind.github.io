@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Mr.Curiosity's LongLife]]></title>
-  <link href="http://GHWind.github.io/atom.xml" rel="self"/>
-  <link href="http://GHWind.github.io/"/>
-  <updated>2014-06-23T12:07:55+08:00</updated>
-  <id>http://GHWind.github.io/</id>
+  <link href="http://ghwind.github.io/atom.xml" rel="self"/>
+  <link href="http://ghwind.github.io/"/>
+  <updated>2014-06-23T12:11:23+08:00</updated>
+  <id>http://ghwind.github.io/</id>
   <author>
     <name><![CDATA[Mr.Curiosity]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[IOS Concurrency]]></title>
-    <link href="http://GHWind.github.io/blog/2014/06/23/ios-concurrency/"/>
+    <link href="http://ghwind.github.io/blog/2014/06/23/ios-concurrency/"/>
     <updated>2014-06-23T11:59:37+08:00</updated>
-    <id>http://GHWind.github.io/blog/2014/06/23/ios-concurrency</id>
+    <id>http://ghwind.github.io/blog/2014/06/23/ios-concurrency</id>
     <content type="html"><![CDATA[<p>Block和函数指针的区别: 函数指针是对一个函数地址的引用，这个函数在编译时就已经确定了。而block是一个函数对象，是在程序运行过程中产生的。在一个作用域中生成的block对象分配在栈上，和其他所有分配在栈上的对象一样，离开这个作用域就不存在了。</p>
 
 <p>dispatch_async_f 功能，我们能够提交指针到程序定义的上下文，用于给定义的C功能函数调用。</p>
@@ -60,9 +60,9 @@
   
   <entry>
     <title type="html"><![CDATA[AVI格式详解]]></title>
-    <link href="http://GHWind.github.io/blog/2014/04/17/avige-shi-xiang-jie/"/>
+    <link href="http://ghwind.github.io/blog/2014/04/17/avige-shi-xiang-jie/"/>
     <updated>2014-04-17T16:48:03+08:00</updated>
-    <id>http://GHWind.github.io/blog/2014/04/17/avige-shi-xiang-jie</id>
+    <id>http://ghwind.github.io/blog/2014/04/17/avige-shi-xiang-jie</id>
     <content type="html"><![CDATA[<p>AVI（Audio Video Interleaved的缩写）是一种RIFF（Resource Interchange File Format的缩写）文件格式，多用于音视频捕捉、编辑、回放等应用程序中。通常情况下，一个AVI文件可以包含多个不同类型的媒体流（典型的情况下有一个音频流和一个视频流），不过含有单一音频流或单一视频流的AVI文件也是合法的。AVI可以算是Windows操作系统上最基本的、也是最常用的一种媒体文件格式。</p>
 
 <p>一、RIFF 文件格式</p>
@@ -195,9 +195,9 @@
   
   <entry>
     <title type="html"><![CDATA[茶道]]></title>
-    <link href="http://GHWind.github.io/blog/2014/04/17/cha-dao/"/>
+    <link href="http://ghwind.github.io/blog/2014/04/17/cha-dao/"/>
     <updated>2014-04-17T13:23:45+08:00</updated>
-    <id>http://GHWind.github.io/blog/2014/04/17/cha-dao</id>
+    <id>http://ghwind.github.io/blog/2014/04/17/cha-dao</id>
     <content type="html"><![CDATA[<p>喝茶十二忌:                                                                   <br/>
 忌空腹喝茶,茶入肺腑会冷脾胃;                                                    <br/>
 忌饮烫茶,最好56摄氏度以下;                                                                                                                                    <br/>
@@ -215,9 +215,9 @@
   
   <entry>
     <title type="html"><![CDATA[Ubuntu 搭建LAMP环境]]></title>
-    <link href="http://GHWind.github.io/blog/2014/04/15/ubuntu-da-jian-lamphuan-jing/"/>
+    <link href="http://ghwind.github.io/blog/2014/04/15/ubuntu-da-jian-lamphuan-jing/"/>
     <updated>2014-04-15T15:50:09+08:00</updated>
-    <id>http://GHWind.github.io/blog/2014/04/15/ubuntu-da-jian-lamphuan-jing</id>
+    <id>http://ghwind.github.io/blog/2014/04/15/ubuntu-da-jian-lamphuan-jing</id>
     <content type="html"><![CDATA[
 ]]></content>
   </entry>

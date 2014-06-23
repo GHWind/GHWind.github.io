@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Ubuntu | Mr.Curiosity's LongLife]]></title>
-  <link href="http://GHWind.github.io/blog/categories/ubuntu/atom.xml" rel="self"/>
-  <link href="http://GHWind.github.io/"/>
-  <updated>2014-06-23T12:07:55+08:00</updated>
-  <id>http://GHWind.github.io/</id>
+  <link href="http://ghwind.github.io/blog/categories/ubuntu/atom.xml" rel="self"/>
+  <link href="http://ghwind.github.io/"/>
+  <updated>2014-06-23T12:11:23+08:00</updated>
+  <id>http://ghwind.github.io/</id>
   <author>
     <name><![CDATA[Mr.Curiosity]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Ubuntu 搭建LAMP环境]]></title>
-    <link href="http://GHWind.github.io/blog/2014/04/15/ubuntu-da-jian-lamphuan-jing/"/>
+    <link href="http://ghwind.github.io/blog/2014/04/15/ubuntu-da-jian-lamphuan-jing/"/>
     <updated>2014-04-15T15:50:09+08:00</updated>
-    <id>http://GHWind.github.io/blog/2014/04/15/ubuntu-da-jian-lamphuan-jing</id>
+    <id>http://ghwind.github.io/blog/2014/04/15/ubuntu-da-jian-lamphuan-jing</id>
     <content type="html"><![CDATA[
 ]]></content>
   </entry>
