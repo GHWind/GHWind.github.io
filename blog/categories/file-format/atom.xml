@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: File Format | Mr.Curiosity's LongLife]]></title>
+  <link href="http://GHWind.github.io/blog/categories/file-format/atom.xml" rel="self"/>
+  <link href="http://GHWind.github.io/"/>
+  <updated>2014-06-23T12:07:55+08:00</updated>
+  <id>http://GHWind.github.io/</id>
+  <author>
+    <name><![CDATA[Mr.Curiosity]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[AVI格式详解]]></title>
+    <link href="http://GHWind.github.io/blog/2014/04/17/avige-shi-xiang-jie/"/>
+    <updated>2014-04-17T16:48:03+08:00</updated>
+    <id>http://GHWind.github.io/blog/2014/04/17/avige-shi-xiang-jie</id>
+    <content type="html"><![CDATA[<p>AVI（Audio Video Interleaved的缩写）是一种RIFF（Resource Interchange File Format的缩写）文件格式，多用于音视频捕捉、编辑、回放等应用程序中。通常情况下，一个AVI文件可以包含多个不同类型的媒体流（典型的情况下有一个音频流和一个视频流），不过含有单一音频流或单一视频流的AVI文件也是合法的。AVI可以算是Windows操作系统上最基本的、也是最常用的一种媒体文件格式。</p>
+
+<p>一、RIFF 文件格式</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>RIFF    文件大小    文件类型    数据&hellip;&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code> |        |           |          | 
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>   4Bytes  4Bytes       4Bytes      4Bytes</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>文件大小: 实际数据长度 + 文件类型(4Bytes) , 也就是说,文件大小的值不包括 ‘RIFF’ 和 ‘文件大小’ 域本身的大小。</p>
+
+<p>RIFF文件的实际数据中,通常使用了列表(List) 和 块(Chunk)的形式来组织。列表可以嵌套子列表和块。</p>
+
+<p>二、列表的结构</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lsquo;LIST&rsquo;   列表大小  列表类型  列表数据&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code> |        |        |          |
+</span><span class='line'>4Bytes  4Bytes    4Bytes    4Bytes
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>列表大小: 实际的列表数据长度 + (ListType 4Bytes), 也就是说, 列表大小不包括’List’领和listSize域本身的大小。</p>
+
+<p>块结构:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ckID   ckSize   ckData&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>|       |        |
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>   4Bytes  4Bytes   4Bytes</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>块大小: 实际的块数据长度,而不包括ckID域和ckSize域本身的大小。</p>
+
+<p>整个AVI结构: RIFF + List1(描述媒体流格式) + List2(保留媒体流数据) + 可选的索引块。</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>RIFF (‘AVI ’&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>  LIST (‘hdrl’
+</span><span class='line'>        ‘avih’(主AVI信息头数据)
+</span><span class='line'>        LIST (‘strl’
+</span><span class='line'>              ‘strh’ (流的头信息数据)
+</span><span class='line'>              ‘strf’ (流的格式信息数据)
+</span><span class='line'>              [‘strd’ (可选的额外的头信息数据) ]
+</span><span class='line'>              [‘strn’ (可选的流的名字) ]
+</span><span class='line'>              ...
+</span><span class='line'>             )
+</span><span class='line'>         ...
+</span><span class='line'>       )
+</span><span class='line'>  LIST (‘movi’
+</span><span class='line'>        { SubChunk | LIST (‘rec ’
+</span><span class='line'>                          SubChunk1
+</span><span class='line'>                          SubChunk2
+</span><span class='line'>                          ...
+</span><span class='line'>                         )
+</span><span class='line'>           ...
+</span><span class='line'>        }
+</span><span class='line'>        ...
+</span><span class='line'>       )
+</span><span class='line'>  [‘idx1’ (可选的AVI索引块数据) ]
+</span><span class='line'> )
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>‘hdrl’ 列表: 用于描述AVI文件中各个流的格式信息(AVI文件中的每一路媒体数据都成为一个流)。 嵌套一系列块和子列表。 首先是 ‘avih’ 块 (记录AVI文件的全局信息，比如流的数量、视频图像的宽和高等)</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>typedef struct _avimainheader {&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>char FORCC_ID[4];         // 必须为 'avih'
+</span><span class='line'>DWORD  cb;                // 本数据结构的大小，不包括最初的8个字节（fcc和cb两个域）
+</span><span class='line'>DWORD  dwMicroSecPerFrame;            // 视频帧间隔时间（以毫秒为单位）
+</span><span class='line'>DWORD  dwMaxBytesPerSec;      // 这个AVI文件的最大数据率
+</span><span class='line'>DWORD  dwPaddingGranularity;  // 数据填充的粒度
+</span><span class='line'>DWORD  dwFlags;           // AVI文件的全局标记，比如是否含有索引块等
+</span><span class='line'>DWORD  dwTotalFrames;     // 总帧数
+</span><span class='line'>DWORD  dwInitialFrames;       // 为交互格式指定初始帧数（非交互格式应该指定为0）
+</span><span class='line'>DWORD  dwStreams;         // 本文件包含的流的个数
+</span><span class='line'>DWORD  dwSuggestedBufferSize; // 建议读取本文件的缓存大小（应能容纳最大的块）
+</span><span class='line'>DWORD  dwWidth;           // 视频图像的宽（以像素为单位）
+</span><span class='line'>DWORD  dwHeight;          // 视频图像的高（以像素为单位）
+</span><span class='line'>DWORD  dwReserved[4];     //  保留
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>} AVIMAINHEADER;</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
+  
+</feed>

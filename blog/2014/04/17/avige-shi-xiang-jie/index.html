@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Mr.Curiosity's LongLife</title>
+  <title>AVI格式详解 - Mr.Curiosity's LongLife</title>
   <meta name="author" content="Mr.Curiosity">
 
   
-  <meta name="description" content="Block和函数指针的区别: 函数指针是对一个函数地址的引用，这个函数在编译时就已经确定了。而block是一个函数对象，是在程序运行过程中产生的。在一个作用域中生成的block对象分配在栈上，和其他所有分配在栈上的对象一样，离开这个作用域就不存在了。 dispatch_async_f 功能， &hellip;">
+  <meta name="description" content="AVI（Audio Video Interleaved的缩写）是一种RIFF（Resource Interchange File Format的缩写）文件格式，多用于音视频捕捉、编辑、回放等应用程序中。通常情况下，一个AVI文件可以包含多个不同类型的媒体流（典型的情况下有一个音频流和一个视频流）， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://GHWind.github.io">
+  <link rel="canonical" href="http://GHWind.github.io/blog/2014/04/17/avige-shi-xiang-jie">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Mr.Curiosity's LongLife" type="application/atom+xml">
@@ -57,87 +57,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/06/23/ios-concurrency/">IOS Concurrency</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-06-23T11:59:37+08:00" pubdate data-updated="true">Jun 23<span>rd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Block和函数指针的区别: 函数指针是对一个函数地址的引用，这个函数在编译时就已经确定了。而block是一个函数对象，是在程序运行过程中产生的。在一个作用域中生成的block对象分配在栈上，和其他所有分配在栈上的对象一样，离开这个作用域就不存在了。</p>
-
-<p>dispatch_async_f 功能，我们能够提交指针到程序定义的上下文，用于给定义的C功能函数调用。</p>
-
-<p>Executing Non-UI Related Tasks Synchronously with GCD:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>dispatch_queue_t concurrentQueue = 
-</span><span class='line'>  dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0);
-</span><span class='line'>
-</span><span class='line'>dispatch_async(concurrentQueue,^{
-</span><span class='line'>  __block UIImage *image = nil;
-</span><span class='line'>
-</span><span class='line'>  dispatch_sync(concurrentQueue,^{
-</span><span class='line'>    /*Download the image here */
-</span><span class='line'>  });
-</span><span class='line'>
-</span><span class='line'> dispatch_sync(dispatch_get_main_queue(), ^{
-</span><span class='line'>    /* Show the image to the user here on the main queue */
-</span><span class='line'>  });
-</span><span class='line'>});</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/04/17/avige-shi-xiang-jie/">AVI格式详解</a></h1>
+      <h1 class="entry-title">AVI格式详解</h1>
     
     
       <p class="meta">
@@ -160,7 +85,7 @@
   </header>
 
 
-  <div class="entry-content"><p>AVI（Audio Video Interleaved的缩写）是一种RIFF（Resource Interchange File Format的缩写）文件格式，多用于音视频捕捉、编辑、回放等应用程序中。通常情况下，一个AVI文件可以包含多个不同类型的媒体流（典型的情况下有一个音频流和一个视频流），不过含有单一音频流或单一视频流的AVI文件也是合法的。AVI可以算是Windows操作系统上最基本的、也是最常用的一种媒体文件格式。</p>
+<div class="entry-content"><p>AVI（Audio Video Interleaved的缩写）是一种RIFF（Resource Interchange File Format的缩写）文件格式，多用于音视频捕捉、编辑、回放等应用程序中。通常情况下，一个AVI文件可以包含多个不同类型的媒体流（典型的情况下有一个音频流和一个视频流），不过含有单一音频流或单一视频流的AVI文件也是合法的。AVI可以算是Windows操作系统上最基本的、也是最常用的一种媒体文件格式。</p>
 
 <p>一、RIFF 文件格式</p>
 
@@ -288,69 +213,16 @@
 
 
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/04/17/cha-dao/">茶道</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
   
 
+<span class="byline author vcard">Posted by <span class="fn">Mr.Curiosity</span></span>
 
-<time datetime="2014-04-17T13:23:45+08:00" pubdate data-updated="true">Apr 17<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>喝茶十二忌:                                                                   <br/>
-忌空腹喝茶,茶入肺腑会冷脾胃;                                                    <br/>
-忌饮烫茶,最好56摄氏度以下;                                                                                                                                    <br/>
-忌饮冷茶,冷茶寒滞、聚痰;                                                         <br/>
-忌冲泡过久,防止氧化、受细菌污染;                                                  <br/>
-忌冲泡次数多,茶中有害微量元素会最后泡茶;                                             <br/>
-忌饭前饮,茶水会冲淡胃酸;                                                        <br/>
-忌饭后马上饮茶,茶中的鞣酸会影响消化;                                            <br/>
-忌用茶水服药,茶中鞣酸会影响药效;                                               <br/>
-忌饮隔夜茶,茶水时间久变质;                                                              <br/>
-忌酒后饮茶,酒后饮茶伤肾;                                                                          <br/>
-忌饮浓茶,咖啡因使人上瘾中毒。</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/04/15/ubuntu-da-jian-lamphuan-jing/">Ubuntu 搭建LAMP环境</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -362,28 +234,42 @@
   
 
 
-<time datetime="2014-04-15T15:50:09+08:00" pubdate data-updated="true">Apr 15<span>th</span>, 2014</time>
-        
-      </p>
+<time datetime="2014-04-17T16:48:03+08:00" pubdate data-updated="true">Apr 17<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/file-format/'>file format</a>
+  
+</span>
+
+
+    </p>
     
-  </header>
-
-
-  <div class="entry-content">
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://GHWind.github.io/blog/2014/04/17/avige-shi-xiang-jie/" data-via="" data-counturl="http://GHWind.github.io/blog/2014/04/17/avige-shi-xiang-jie/" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/04/17/cha-dao/" title="Previous Post: 茶道">&laquo; 茶道</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/06/23/ios-concurrency/" title="Next Post: IOS Concurrency">IOS Concurrency &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
 
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
 </div>
-<aside class="sidebar">
+
+  <aside class="sidebar">
    
 <form action="https://www.google.com/search" method="get">
   <fieldset role="search">
@@ -427,6 +313,7 @@
 
   
 </aside>
+
 
 
     </div>
