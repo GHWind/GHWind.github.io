@@ -4,7 +4,7 @@
   <title><![CDATA[Mr.Curiosity's LongLife]]></title>
   <link href="http://ghwind.github.io/atom.xml" rel="self"/>
   <link href="http://ghwind.github.io/"/>
-  <updated>2014-09-25T10:15:11+08:00</updated>
+  <updated>2014-11-11T18:30:40+08:00</updated>
   <id>http://ghwind.github.io/</id>
   <author>
     <name><![CDATA[Mr.Curiosity]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Swift Learning]]></title>
+    <link href="http://ghwind.github.io/blog/2014/09/25/swift-learning/"/>
+    <updated>2014-09-25T15:12:46+08:00</updated>
+    <id>http://ghwind.github.io/blog/2014/09/25/swift-learning</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[文学摘录]]></title>
